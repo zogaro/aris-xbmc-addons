@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# vStream https://github.com/Kodi-vStream/venom-xbmc-addons
+# Aris (fork de vStream) - https://github.com/zogaro/aris-xbmc-addons
 # import xbmc
 
 # from resources.lib.statistic import cStatistic
@@ -48,10 +48,10 @@ class main:
         self.parseUrl()
 
     def parseUrl(self):
-        # Exclue les appels par des plugins qu'on ne sait pas gérer, par exemple : plugin://plugin.video.vstream/extrafanart
+        # Exclue les appels par des plugins qu'on ne sait pas gérer, par exemple : plugin://plugin.video.aris/extrafanart
         oPluginHandler = cPluginHandler()
         pluginPath = oPluginHandler.getPluginPath()
-        if pluginPath == 'plugin://plugin.video.vstream/extrafanart/':
+        if pluginPath == 'plugin://plugin.video.aris/extrafanart/':
             return
 
         oInputParameterHandler = cInputParameterHandler()
@@ -199,7 +199,7 @@ def setSetting(addon_id, param, value):
 
 # Permet la modification des settings depuis un raccourci dans le skin (jusqu'à 100 paramètres).
 # Supporte les retours à la ligne seulement derrière le paramètre, exemple :
-# RunAddon(plugin.video.vstream,function=setSettings&id1=plugin_cinemay_com&value1=true
+# RunAddon(plugin.video.aris,function=setSettings&id1=plugin_cinemay_com&value1=true
 # &id2=plugin_cinemegatoil_org&value2=false
 # &id3=hoster_uploaded_premium&value3=true
 # &id4=hoster_uploaded_username&value4=MyName
