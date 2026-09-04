@@ -132,7 +132,7 @@
 							<texturenofocus colordiffuse="D0FFFFFF">linefocus.png</texturenofocus>
 							<texturefocus colordiffuse=$INFO[Window.Property(color)]>linefocus.png</texturefocus>
 							<animation reversible="false" center="auto" easing="inout" effect="zoom" end="100" start="90" time="400" tween="back">Focus</animation>
-							<label>$ADDON[plugin.video.vstream 30409]</label>
+							<label>$ADDON[plugin.video.aris 30409]</label>
 							<onclick>Action(Close)</onclick>
 							<visible>!Player.HasMedia</visible>
 						</control>
@@ -697,7 +697,7 @@
 					<width>820</width>
 					<height>20</height>
 					<font>font12</font>
-					<label>$ADDON[plugin.video.vstream 30460]: $INFO[Container(50).ListItem.Label] / $INFO[Container(50).ListItem.Label2]</label>
+					<label>$ADDON[plugin.video.aris 30460]: $INFO[Container(50).ListItem.Label] / $INFO[Container(50).ListItem.Label2]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -1018,7 +1018,7 @@
 					<width>820</width>
 					<height>20</height>
 					<font>font12</font>
-					<label>$ADDON[plugin.video.vstream 30459]: $INFO[Container(5205).ListItem.Label]</label>
+					<label>$ADDON[plugin.video.aris 30459]: $INFO[Container(5205).ListItem.Label]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -1030,7 +1030,7 @@
 					<width>820</width>
 					<height>20</height>
 					<font>font12</font>
-					<label>$ADDON[plugin.video.vstream 30313]: $INFO[Container(5210).ListItem.Label]</label>
+					<label>$ADDON[plugin.video.aris 30313]: $INFO[Container(5210).ListItem.Label]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -1406,7 +1406,7 @@
 					<font>font12</font>
 					<height>40</height>
 					<width>auto</width>
-					<label>$ADDON[plugin.video.vstream 30460]</label>
+					<label>$ADDON[plugin.video.aris 30460]</label>
 					<textcolor>FFFFFFFF</textcolor>
 					<focusedcolor>FFFFFFFF</focusedcolor>
 					<texturenofocus border="10" diffuse="box.png" colordiffuse="D0FFFFFF">focus.png</texturenofocus>
@@ -1460,7 +1460,7 @@
 					<font>font12</font>
 					<height>40</height>
 					<width>auto</width>
-					<label>$ADDON[plugin.video.vstream 30210]</label>
+					<label>$ADDON[plugin.video.aris 30210]</label>
 					<textcolor>FFFFFFFF</textcolor>
 					<focusedcolor>FFFFFFFF</focusedcolor>
 					<texturenofocus border="10" diffuse="box.png" colordiffuse="D0FFFFFF">focus.png</texturenofocus>
