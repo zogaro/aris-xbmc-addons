@@ -49,7 +49,7 @@ class cClear:
             return
 
         if (env == 'changelog_old'):
-            sUrl = 'https://raw.githubusercontent.com/Kodi-vStream/venom-xbmc-addons/master/plugin.video.vstream/changelog.txt'
+            sUrl = 'https://raw.githubusercontent.com/zogaro/aris-xbmc-addons/Beta/plugin.video.aris/changelog.txt'
             try:
                 oRequest = urllib2.Request(sUrl)
                 oResponse = urllib2.urlopen(oRequest)
@@ -60,7 +60,7 @@ class cClear:
                 else:
                     sContent = oResponse.read()
 
-                self.TextBoxes('vStream Changelog', sContent)
+                self.TextBoxes('Aris Changelog', sContent)
             except:
                 self.DIALOG.VSerror("%s, %s" % (self.ADDON.VSlang(30205), sUrl))
             return
@@ -81,7 +81,7 @@ class cClear:
                     self.getControl(1).setLabel('ChangeLog')
                     self.button.setLabel('OK')
 
-                    sUrl = 'https://api.github.com/repos/Kodi-vStream/venom-xbmc-addons/commits'
+                    sUrl = 'https://api.github.com/repos/zogaro/aris-xbmc-addons/commits'
                     oRequest = urllib2.Request(sUrl)
                     oResponse = urllib2.urlopen(oRequest)
 
@@ -121,14 +121,14 @@ class cClear:
                 def _close_dialog(self):
                     self.close()
 
-            path = "special://home/addons/plugin.video.vstream"
+            path = "special://home/addons/plugin.video.aris"
             wd = XMLDialog('DialogSelect.xml', path, "Default")
             wd.doModal()
             del wd
             return
 
         if (env == 'soutient'):
-            sUrl = 'https://raw.githubusercontent.com/Kodi-vStream/venom-xbmc-addons/master/plugin.video.vstream/soutient.txt'
+            sUrl = 'https://raw.githubusercontent.com/zogaro/aris-xbmc-addons/Beta/plugin.video.aris/soutient.txt'
             try:
                 oRequest = urllib2.Request(sUrl)
                 oResponse = urllib2.urlopen(oRequest)
@@ -139,7 +139,7 @@ class cClear:
                 else:
                     sContent = oResponse.read()
 
-                self.TextBoxes('vStream Soutient', sContent)
+                self.TextBoxes('Aris Soutient', sContent)
             except:
                 self.DIALOG.VSerror("%s, %s" % (self.ADDON.VSlang(30205), sUrl))
             return
@@ -148,7 +148,7 @@ class cClear:
             liste = ['Historiques des recherches', 'Marque-Pages', 'En cours de lecture',
                      'Niveau de lecture', 'Marqués vues', 'Téléchargements']
             ret = self.DIALOG.VSselect(liste, self.ADDON.VSlang(30110))
-            cached_DB = "special://home/userdata/addon_data/plugin.video.vstream/vstream.db"
+            cached_DB = "special://home/userdata/addon_data/plugin.video.aris/aris.db"
             # important seul xbmcvfs peux lire le special
             try:
                 cached_DB = VSPath(cached_DB).decode("utf-8")
@@ -237,7 +237,7 @@ class cClear:
                         # teste si deja dans le dsip
                         sPluginName = aPlugin[1]
                         isActive = self.sitesManager.isActive(sPluginName)
-                        icon = "special://home/addons/plugin.video.vstream/resources/art/sites/%s.png" % sPluginName
+                        icon = "special://home/addons/plugin.video.aris/resources/art/sites/%s.png" % sPluginName
                         stitle = self.sitesManager.getProperty(sPluginName, self.sitesManager.LABEL)
 
                         if isActive:
@@ -287,7 +287,7 @@ class cClear:
                 def onFocus(self, controlId):
                     self.controlId = controlId
 
-            path = "special://home/addons/plugin.video.vstream"
+            path = "special://home/addons/plugin.video.aris"
             wd = XMLDialog('DialogSelect.xml', path, "Default")
             wd.doModal()
             del wd
@@ -295,21 +295,21 @@ class cClear:
 
         if (env == 'sauv'):
             select = self.DIALOG.VSselect(['Import', 'Export'])
-            DB = "special://home/userdata/addon_data/plugin.video.vstream/vstream.db"
+            DB = "special://home/userdata/addon_data/plugin.video.aris/aris.db"
             if select >= 0:
                 try:
                     if select == 0:
                         # sélection d'un fichier
-                        new = self.DIALOG.VSbrowse(1, 'vStream', "files")
+                        new = self.DIALOG.VSbrowse(1, 'Aris', "files")
                         if new:
                             xbmcvfs.delete(DB)
                             xbmcvfs.copy(new, DB)
                             self.DIALOG.VSinfo(self.ADDON.VSlang(30099))
                     elif select == 1:
                         # sélection d'un répertoire
-                        new = self.DIALOG.VSbrowse(3, 'vStream', "files")
+                        new = self.DIALOG.VSbrowse(3, 'Aris', "files")
                         if new:
-                            xbmcvfs.copy(DB, new + 'vstream.db')
+                            xbmcvfs.copy(DB, new + 'aris.db')
                             self.DIALOG.VSinfo(self.ADDON.VSlang(30099))
                 except:
                     self.DIALOG.VSerror(self.ADDON.VSlang(30100))
