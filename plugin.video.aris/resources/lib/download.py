@@ -332,7 +332,7 @@ class cDownload:
         sPluginPath = cPluginHandler().getPluginPath()
         sItemUrl = '%s?site=%s&function=%s&title=%s' % (sPluginPath, SITE_IDENTIFIER, 'StartDownloadList', 'title')
         item = xbmcgui.ListItem('Démarrer la liste')
-        item.setArt({'icon':'special://home/addons/plugin.video.vstream/resources/art/download.png'})
+        item.setArt({'icon':'special://home/addons/plugin.video.aris/resources/art/download.png'})
         xbmcplugin.addDirectoryItem(sPluginHandle, sItemUrl, item, isFolder=False)
 
         oGui = cGui()
