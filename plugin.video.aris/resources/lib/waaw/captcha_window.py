@@ -12,8 +12,8 @@ import xbmc
 import xbmcvfs
 from xbmcgui import Control
 
-CAPTCHA_IMAGE_PATH = 'special://home/userdata/addon_data/plugin.video.vstream/Captcha.png'
-CADRE_ROUGE = "special://home/addons/plugin.video.vstream/resources/lib/waaw/resources/media/border90.png"
+CAPTCHA_IMAGE_PATH = 'special://home/userdata/addon_data/plugin.video.aris/Captcha.png'
+CADRE_ROUGE = "special://home/addons/plugin.video.aris/resources/lib/waaw/resources/media/border90.png"
 
 
 class CaptchaWindow(xbmcgui.WindowDialog):
