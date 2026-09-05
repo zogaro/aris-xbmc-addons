@@ -1,2 +1,2 @@
 import xbmc
-xbmc.executebuiltin("RunPlugin(plugin://plugin.video.vstream/?site=cFav&function=delBookmarkMenu)", True)
+xbmc.executebuiltin("RunPlugin(plugin://plugin.video.aris/?site=cFav&function=delBookmarkMenu)", True)
