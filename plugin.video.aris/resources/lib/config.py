@@ -17,7 +17,7 @@ import json
 
 
 class GestionCookie:
-    PathCache = 'special://userdata/addon_data/plugin.video.vstream'
+    PathCache = 'special://userdata/addon_data/plugin.video.aris'
 
     def MakeListwithCookies(self, c):
         t = {}
@@ -148,7 +148,7 @@ def WindowsBoxes(sTitle, siteUrl, metaType, year, sSite, sFav, sCat):
             sType = 'tvshow'
         meta = cTMDb().get_meta(sType, sTitle, tmdb_id=tmdb_id, year=year, season=season, episode=episode)
     except:
-        DIALOG.VSok("Veuillez vider le cache des métadonnées Paramètre - outils - 'vider le cache de vStream'")
+        DIALOG.VSok("Veuillez vider le cache des métadonnées Paramètre - outils - 'vider le cache d'Aris'")
         pass
 
     # si rien ne marche
@@ -491,7 +491,7 @@ def WindowsBoxes(sTitle, siteUrl, metaType, year, sSite, sFav, sCat):
             if action.getId() in (9, 10, 11, 30, 92, 216, 247, 257, 275, 61467, 61448):
                 self.close()
 
-    path = 'special://home/addons/plugin.video.vstream'
+    path = 'special://home/addons/plugin.video.aris'
     # self.__oPath.decode('utf-8')
     args = ('DialogInfo4.xml', path, 'default', '720p')
     kwargs = {}
