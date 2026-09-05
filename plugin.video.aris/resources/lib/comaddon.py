@@ -36,11 +36,11 @@ class addon(xbmcaddon.Addon):
 
 L'utilisation de subclass peut provoquer des fuites de mémoire, signalé par ce message :
 
-the python script "\plugin.video.vstream\default.py" has left several classes in memory that we couldn't clean up. The classes include: class XBMCAddon::xbmcaddon::Addon
+the python script "\plugin.video.aris\default.py" has left several classes in memory that we couldn't clean up. The classes include: class XBMCAddon::xbmcaddon::Addon
 
 # https://stackoverflow.com/questions/26588266/xbmc-addon-memory-leak
 """
-ADDONVS = xbmcaddon.Addon('plugin.video.vstream')  # singleton
+ADDONVS = xbmcaddon.Addon('plugin.video.aris')  # singleton
 
 
 # class addon(xbmcaddon.Addon):
@@ -78,13 +78,13 @@ class dialog:
     def __init__(self):
         self.DIALOG = xbmcgui.Dialog()
 
-    def VSok(self, desc, title='vStream'):
+    def VSok(self, desc, title='Aris'):
         return self.DIALOG.ok(title, desc)
 
-    def VSyesno(self, desc, title='vStream'):
+    def VSyesno(self, desc, title='Aris'):
         return self.DIALOG.yesno(title, desc)
 
-    def VSselect(self, desc, title='vStream'):
+    def VSselect(self, desc, title='Aris'):
         return self.DIALOG.select(title, desc)
 
     def numeric(self, dialogType, heading, defaultt):
@@ -105,16 +105,16 @@ class dialog:
             return list_url[ret]
         return ''
 
-    def VSinfo(self, desc, title='vStream', iseconds=1, sound=False):
+    def VSinfo(self, desc, title='Aris', iseconds=1, sound=False):
         if (addon().getSetting('Block_Noti_sound') == 'true'):
             sound = True
 
         return self.DIALOG.notification(str(title), str(desc), xbmcgui.NOTIFICATION_INFO, iseconds*1000, sound)
 
     def VSerror(self, e):
-        return self.DIALOG.notification('vStream', 'Erreur: ' + str(e), xbmcgui.NOTIFICATION_ERROR, 2000), VSlog('Erreur: ' + str(e))
+        return self.DIALOG.notification('Aris', 'Erreur: ' + str(e), xbmcgui.NOTIFICATION_ERROR, 2000), VSlog('Erreur: ' + str(e))
 
-    def VStextView(self, desc, title='vStream'):
+    def VStextView(self, desc, title='Aris'):
         return self.DIALOG.textviewer(title, desc)
 
 
@@ -333,7 +333,7 @@ class listitem(xbmcgui.ListItem):
 
     # Permet l'ajout d'un menu après la création d'un item
     def addMenu(self, sFile, sFunction, sTitle, oOutputParameterHandler=False):
-        sPluginPath = 'plugin://plugin.video.vstream/'  # cPluginHandler().getPluginPath()
+        sPluginPath = 'plugin://plugin.video.aris/'  # cPluginHandler().getPluginPath()
         nbContextMenu = self.getProperty('nbcontextmenu')
         nbContextMenu = int(nbContextMenu) if nbContextMenu else 0
 
@@ -365,7 +365,7 @@ def VSlog(e, level=xbmc.LOGDEBUG):
                 level = xbmc.LOGINFO
             else:
                 level = xbmc.LOGNOTICE
-        xbmc.log('\t[PLUGIN] vStream: ' + str(e), level)
+        xbmc.log('\t[PLUGIN] Aris: ' + str(e), level)
 
     except:
         pass
@@ -458,15 +458,15 @@ class siteManager:
     def __init__(self):
         
         # Propriétés par défaut
-        self.defaultPath = VSPath('special://home/addons/plugin.video.vstream/resources/sites.json')
+        self.defaultPath = VSPath('special://home/addons/plugin.video.aris/resources/sites.json')
         self.defaultData = None
 
         # Propriétés selon le profil        
         name = VSProfil()
         if name == 'Master user':   # Le cas par defaut
-            path = VSPath('special://home/userdata/addon_data/plugin.video.vstream/sites.json')
+            path = VSPath('special://home/userdata/addon_data/plugin.video.aris/sites.json')
         else:
-            path = VSPath('special://home/userdata/profiles/' + name + '/addon_data/plugin.video.vstream/sites.json')
+            path = VSPath('special://home/userdata/profiles/' + name + '/addon_data/plugin.video.aris/sites.json')
         
         # Résolution du chemin
         try:
@@ -638,5 +638,3 @@ class addonManager:
                 return xbmcaddon.Addon(id=addon_id).setSetting(param, value)
             return True
         return False
-
-
