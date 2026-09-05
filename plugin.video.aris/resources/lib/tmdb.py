@@ -59,7 +59,7 @@ class cTMDb:
 
     URL = 'https://api.themoviedb.org/%d/'
     URL_TRAILER = 'plugin://plugin.video.youtube/play/?video_id=%s' # ancien : 'plugin://plugin.video.youtube/?action=play_video&videoid=%s'
-    CACHE = 'special://home/userdata/addon_data/plugin.video.vstream/video_cache.db'
+    CACHE = 'special://home/userdata/addon_data/plugin.video.aris/video_cache.db'
     TMDB_CACHE_SCHEMA = 2
     LOGO_TMDB_SIZE = 'original'
 
@@ -349,8 +349,8 @@ class cTMDb:
                 import qrcode
                 from resources.lib.librecaptcha.gui import cInputWindowYesNo
                 qr = qrcode.make(url + result['request_token'])
-                qr.save(VSPath('special://home/userdata/addon_data/plugin.video.vstream/qrcode.png'), scale=5)
-                oSolver = cInputWindowYesNo(captcha='special://home/userdata/addon_data/plugin.video.vstream/qrcode.png', msg="Scanner le QRCode pour acceder au lien d'autorisation", roundnum=1)
+                qr.save(VSPath('special://home/userdata/addon_data/plugin.video.aris/qrcode.png'), scale=5)
+                oSolver = cInputWindowYesNo(captcha='special://home/userdata/addon_data/plugin.video.aris/qrcode.png', msg="Scanner le QRCode pour acceder au lien d'autorisation", roundnum=1)
                 retArg = oSolver.get()
                 if retArg == "N":
                     return False
