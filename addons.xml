@@ -80,13 +80,13 @@
 
 <addon id="repository.aris"
        name="Aris Repository"
-        version="0.0.6"
+        version="0.0.7"
         provider-name="zogaro">
     <extension point="xbmc.addon.repository" name="Aris XBMC Addon Repository">
     <dir>
         <info compressed="false">https://raw.githubusercontent.com/zogaro/aris-xbmc-addons/Beta/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/zogaro/aris-xbmc-addons/Beta/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/zogaro/aris-xbmc-addons/raw/Beta/repo</datadir>
+        <datadir zip="true">https://raw.githubusercontent.com/zogaro/aris-xbmc-addons/Beta/repo</datadir>
     </dir>
    </extension>
     <extension point="xbmc.addon.metadata">
