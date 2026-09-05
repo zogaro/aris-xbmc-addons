@@ -13,8 +13,8 @@ class cInputWindow(xbmcgui.WindowDialog):
         DimTab = kwargs.get('dimtab')
         self.DimTabTotal = DimTab[0] * DimTab[1]
 
-        bg_image = 'special://home/addons/plugin.video.vstream/resources/art/background.png'
-        check_image = 'special://home/addons/plugin.video.vstream/resources/art/trans_checked.png'
+        bg_image = 'special://home/addons/plugin.video.aris/resources/art/background.png'
+        check_image = 'special://home/addons/plugin.video.aris/resources/art/trans_checked.png'
 
         self.ctrlBackground = xbmcgui.ControlImage(0, 0, 1280, 720, bg_image)
         self.cancelled = False
@@ -145,7 +145,7 @@ class cInputWindowYesNo(xbmcgui.WindowDialog):
         self.cptloc = kwargs.get('captcha')
         okDialog = kwargs.get('okDialog')
 
-        bg_image = 'special://home/addons/plugin.video.vstream/resources/art/background.png'
+        bg_image = 'special://home/addons/plugin.video.aris/resources/art/background.png'
 
         self.ctrlBackground = xbmcgui.ControlImage(0, 0, 1280, 720, bg_image)
         self.cancelled = False
