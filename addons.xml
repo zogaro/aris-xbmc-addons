@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.vstream" name="vStream" version="4.1.1" provider-name="venom-xbmc-addons">
+<addon id="plugin.video.aris" name="Aris" version="4.1.1" provider-name="zogaro">
     <requires>
 
         <trycatch>
@@ -11,7 +11,7 @@
                 <import addon="xbmc.python" version="2.24.0"/>
             </catch>
         </trycatch>
-        <import addon="repository.vstream"/>
+        <import addon="repository.aris"/>
         <import addon="script.module.qrcode"/>
         <import addon="script.module.requests"/>
         <import addon="script.module.dnspython" optional="true"/>
@@ -25,23 +25,23 @@
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="resources/lib/gui/menuInformation.py">
-		        <label>[COLOR lightcoral]$ADDON[plugin.video.vstream 30208][/COLOR]</label>
+		        <label>[COLOR lightcoral]$ADDON[plugin.video.aris 30208][/COLOR]</label>
 				<visible>Window.IsVisible(home) + ListItem.Property(sMeta)</visible>
             </item>
             <item library="resources/lib/gui/menuAddBookmark.py">
-		        <label>[COLOR lightcoral]$ADDON[plugin.video.vstream 30210][/COLOR]</label>
+		        <label>[COLOR lightcoral]$ADDON[plugin.video.aris 30210][/COLOR]</label>
 				<visible>Window.IsVisible(home) + !ListItem.Property(isBookmark) + ListItem.Property(sMeta)</visible>
             </item>
             <item library="resources/lib/gui/menuSimil.py">
-		        <label>[COLOR lightcoral]$ADDON[plugin.video.vstream 30213][/COLOR]</label>
+		        <label>[COLOR lightcoral]$ADDON[plugin.video.aris 30213][/COLOR]</label>
 				<visible>Window.IsVisible(home) + ListItem.Property(sMeta)</visible>
             </item>
             <item library="resources/lib/gui/menuDelBookmark.py">
-		        <label>$ADDON[plugin.video.vstream 30412]</label>
+		        <label>$ADDON[plugin.video.aris 30412]</label>
 				<visible>Window.IsVisible(home) + ListItem.Property(isBookmark)</visible>
             </item>
             <item library="resources/lib/gui/menuDelViewing.py">
-		        <label>$ADDON[plugin.video.vstream 30412]</label>
+		        <label>$ADDON[plugin.video.aris 30412]</label>
 				<visible>Window.IsVisible(home) + ListItem.Property(isViewing)</visible>
             </item>
 		</menu>
@@ -49,25 +49,25 @@
 
     <extension point="xbmc.service" library="service.py"/>
     <extension point="xbmc.addon.metadata">
-        <summary lang="fr_FR">vStream par Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
-        <description lang="fr_FR">vStream est un module de streaming Francais, retrouvez tous vos films, series, japanimes, documentaires, reportages, concerts, sports,...</description>
-        <disclaimer lang="fr_FR">vStream est un addon de streaming videos. Obtenez du support aupres de notre partenaire [COLOR red]"les alKODIques"[/COLOR].</disclaimer>
-        <summary lang="fr_CA">vStream par Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
-        <description lang="fr_CA">vStream est un module de streaming Francais, trouvez tous vos films, series et mangas.</description>
-        <disclaimer lang="fr_CA">vStream est un addon de streaming videos</disclaimer>
-        <summary lang="en_GB">vStream by Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
-        <description lang="en_GB">vStream module and a French streaming, find all your movies, TV shows and mangas.</description>
-        <disclaimer lang="en_GB">vStream is a video streaming addon</disclaimer>
-        <summary lang="en_NZ">vStream by Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
-        <description lang="en_NZ">vStream module and a French streaming, find all your movies, TV shows and mangas.</description>
-        <disclaimer lang="en_NZ">vStream is a video streaming addon</disclaimer>
-        <summary lang="en_US">vStream by Venom, TmpName, Arias800, Razorex, SiZaNiK, Yodidon.</summary>
-        <description lang="en_US">vStream module and a French streaming, find all your movies, TV shows and mangas.</description>
-        <disclaimer lang="en_US">vStream is a video streaming addon</disclaimer>
+        <summary lang="fr_FR">Aris créé par zogaro.</summary>
+        <description lang="fr_FR">Aris est un module de streaming Francais, retrouvez tous vos films, series, japanimes, documentaires, reportages, concerts, sports,...</description>
+        <disclaimer lang="fr_FR">Aris est un addon de streaming videos.</disclaimer>
+        <summary lang="fr_CA">Aris créé par zogaro.</summary>
+        <description lang="fr_CA">Aris est un module de streaming Francais, trouvez tous vos films, series et mangas.</description>
+        <disclaimer lang="fr_CA">Aris est un addon de streaming videos</disclaimer>
+        <summary lang="en_GB">Aris, created by zogaro.</summary>
+        <description lang="en_GB">Aris module and a French streaming, find all your movies, TV shows and mangas.</description>
+        <disclaimer lang="en_GB">Aris is a video streaming addon</disclaimer>
+        <summary lang="en_NZ">Aris, created by zogaro.</summary>
+        <description lang="en_NZ">Aris module and a French streaming, find all your movies, TV shows and mangas.</description>
+        <disclaimer lang="en_NZ">Aris is a video streaming addon</disclaimer>
+        <summary lang="en_US">Aris, created by zogaro.</summary>
+        <description lang="en_US">Aris module and a French streaming, find all your movies, TV shows and mangas.</description>
+        <disclaimer lang="en_US">Aris is a video streaming addon</disclaimer>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE</license>
-        <forum>https://github.com/Kodi-vStream/venom-xbmc-addons/issues</forum>
-        <source>https://github.com/Kodi-vStream/venom-xbmc-addons/</source>
+        <forum>https://github.com/zogaro/aris-xbmc-addons/issues</forum>
+        <source>https://github.com/zogaro/aris-xbmc-addons/</source>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
@@ -78,28 +78,49 @@
     </extension>
 </addon>
 
-<addon id="repository.vstream"
-       name="vStream Repository"
+<addon id="repository.aris"
+       name="Aris Repository"
         version="0.0.6"
-        provider-name="Venom">
-    <extension point="xbmc.addon.repository" name="vStream XBMC Addon Repository">
+        provider-name="zogaro">
+    <extension point="xbmc.addon.repository" name="Aris XBMC Addon Repository">
     <dir>
-        <info compressed="false">https://raw.githubusercontent.com/Kodi-vStream/venom-xbmc-addons/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/Kodi-vStream/venom-xbmc-addons/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/Kodi-vStream/venom-xbmc-addons/raw/master/repo</datadir>
+        <info compressed="false">https://raw.githubusercontent.com/zogaro/aris-xbmc-addons/Beta/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/zogaro/aris-xbmc-addons/Beta/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/zogaro/aris-xbmc-addons/raw/Beta/repo</datadir>
     </dir>
    </extension>
-
     <extension point="xbmc.addon.metadata">
-        <summary lang="fr">vStream Repository</summary>
-        <description lang="fr">Installer vStream</description>
-        <summary lang="en">vStream Repository</summary>
-        <description lang="en">Download and install vStream</description>
+        <summary lang="fr">Aris Repository</summary>
+        <description lang="fr">Installer Aris</description>
+        <summary lang="en">Aris Repository</summary>
+        <description lang="en">Download and install Aris</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
+</addon>
+
+<addon id="script.module.dnspython"
+       name="DNS Python"
+	   version="1.12.1"
+	   provider-name="dnspython">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+	<summary>A Pure Python DNS module</summary>
+	<description>A Pure Python DNS module</description>
+	<disclaimer lang="en"></disclaimer>
+	<language>en</language>
+    <platform>all</platform>
+	<license>BSD-style license</license>
+	<forum></forum>
+	<website>http://www.dnspython.org/</website>
+	<email></email>
+	<source>https://github.com/Arias800/script.module.dnspython/</source>
+  </extension>
 </addon>
 </addons>
