@@ -36,7 +36,7 @@ except:
 
 Objectif = ""
 DimTab = []
-STRINGS_PATH = 'special://home/userdata/addon_data/plugin.video.vstream'
+STRINGS_PATH = 'special://home/userdata/addon_data/plugin.video.aris'
 
 
 class CliSolver(object):
