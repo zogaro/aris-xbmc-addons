@@ -13,7 +13,7 @@
         <import addon="repository.aris"/>
         <import addon="script.module.qrcode"/>
         <import addon="script.module.requests"/>
-        <import addon="script.module.dnspython" optional="true"/>
+        <import addon="script.module.dnspython" version="1.12.1"/>
         <!-- Pour le DEBUG        <import addon="script.module.pydevd" version="4.4.0"/> -->
     </requires>
 
