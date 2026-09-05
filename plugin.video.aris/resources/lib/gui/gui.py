@@ -534,7 +534,7 @@ class cGui:
                     pass  # En cas de type exotique, on évite de faire planter le thread
 
             # On RENSEIGNE TOUJOURS les métadonnées, même si un ID TMDb est présent
-            # => le synopsis/local data de vStream/pastebin reste utilisable.
+            # => le synopsis/local data de Aris/pastebin reste utilisable.
             videoInfoTag.setOriginalTitle(data.get('originaltitle', ""))
             videoInfoTag.setPlot(data.get('plot', ""))
             videoInfoTag.setPlotOutline(data.get('tagline', ""))
@@ -921,7 +921,7 @@ class cGui:
 
     def setWatched(self):
         if True:
-            # Use vStream database
+            # Use Aris database
             oInputParameterHandler = cInputParameterHandler()
             sSite = oInputParameterHandler.getValue('sId')
             sSiteUrl = oInputParameterHandler.getValue('siteUrl')
@@ -990,7 +990,7 @@ class cGui:
     def openSettings(self):
         return False
 
-    def showNofication(self, sDesc, sTitle='vStream', iSeconds=3):
+    def showNofication(self, sDesc, sTitle='Aris', iSeconds=3):
         # Pas de notif  lors des recherches globales
         if window(10101).getProperty('search') == 'true':
             return
@@ -1028,4 +1028,3 @@ class cGui:
         cGui.searchResultsSemaphore.acquire()
         cGui.searchResults = {}
         cGui.searchResultsSemaphore.release()
-
