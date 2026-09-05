@@ -578,9 +578,9 @@ class cHome:
 
     def showDonation(self):
         from resources.lib.librecaptcha.gui import cInputWindowYesNo
-    inputText = 'Merci pour votre soutien, il permet de maintenir Aris.\r\nScanner ce code ou rendez vous sur :\r\nhttps://paypal.me/ZoGarO13'
-    oSolver = cInputWindowYesNo(captcha='special://home/addons/plugin.video.aris/paypal.jpg', msg=inputText, roundnum=1, okDialog=True)
-    oSolver.get()
+        inputText = 'Merci pour votre soutien, il permet de maintenir Aris.\r\nScanner ce code ou rendez vous sur :\r\nhttps://paypal.me/ZoGarO13'
+        oSolver = cInputWindowYesNo(captcha='special://home/addons/plugin.video.aris/paypal.jpg', msg=inputText, roundnum=1, okDialog=True)
+        oSolver.get()
 
 
     def showHostDirect(self):  # fonction de recherche
