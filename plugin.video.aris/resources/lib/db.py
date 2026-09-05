@@ -22,9 +22,9 @@ class cDb(object):
 
         # Le cas par defaut.
         if name == 'Master user':
-            DB = 'special://home/userdata/addon_data/plugin.video.vstream/vstream.db'
+            DB = 'special://home/userdata/addon_data/plugin.video.aris/aris.db'
         else:
-            DB = 'special://home/userdata/profiles/' + name + '/addon_data/plugin.video.vstream/vstream.db'
+            DB = 'special://home/userdata/profiles/' + name + '/addon_data/plugin.video.aris/aris.db'
 
         try:
             REALDB = VSPath(DB).decode('utf-8')
