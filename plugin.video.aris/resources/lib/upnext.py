@@ -126,7 +126,7 @@ class UpNext:
 
 
             sParams = oOutputParameterHandler.getParameterAsUri()
-            url = 'plugin://plugin.video.vstream/?site=cHosterGui&function=play&%s' % sParams
+            url = 'plugin://plugin.video.aris/?site=cHosterGui&function=play&%s' % sParams
 
             # sThumbnail = guiElement.getThumbnail()
             sThumbnail = sThumb
@@ -274,7 +274,7 @@ class UpNext:
                 "id": 1,
                 "method": "JSONRPC.NotifyAll",
                 "params": {
-                    "sender": "%s.SIGNAL" % 'plugin.video.vStream',
+                    "sender": "%s.SIGNAL" % 'plugin.video.aris',
                     "message": 'upnext_data',
                     "data": [data],
                 }
@@ -323,3 +323,4 @@ class UpNext:
                 addonManager().installAddon(upnext_id)
                 # ce n'est pas pris en compte à l'installation de l'addon, donc return False, il faudra attendre le prochain épisode
                 return False
+                
