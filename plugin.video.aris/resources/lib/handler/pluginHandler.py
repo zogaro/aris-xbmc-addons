@@ -63,7 +63,7 @@ class cPluginHandler:
         addons = addon()
         sitesManager = siteManager()
 
-        sFolder = "special://home/addons/plugin.video.vstream/resources/sites"
+        sFolder = "special://home/addons/plugin.video.aris/resources/sites"
         sFolder = sFolder.replace('\\', '/')
 
         aFileNames = self.__getFileNamesFromFolder(sFolder)
@@ -95,7 +95,7 @@ class cPluginHandler:
 
     def getAllPlugins(self):
         sitesManager = siteManager()
-        sFolder = "special://home/addons/plugin.video.vstream/resources/sites"
+        sFolder = "special://home/addons/plugin.video.aris/resources/sites"
         sFolder = sFolder.replace('\\', '/')
 
         aFileNames = self.__getFileNamesFromFolder(sFolder)
