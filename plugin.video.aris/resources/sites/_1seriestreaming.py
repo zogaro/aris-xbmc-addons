@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# vStream https://github.com/Kodi-vStream/venom-xbmc-addons
+   # Aris (fork de vStream) https://github.com/zogaro/aris-xbmc-addons
 
 import re
 
