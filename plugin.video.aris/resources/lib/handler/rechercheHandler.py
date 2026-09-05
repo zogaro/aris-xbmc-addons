@@ -125,7 +125,7 @@ class cRechercheHandler:
             VSlog(str(e))
             pass
 
-        sFolder = "special://home/addons/plugin.video.vstream/resources/sites"
+        sFolder = "special://home/addons/plugin.video.aris/resources/sites"
         sFolder = sFolder.replace('\\', '/')
         VSlog("Sites Folder: " + sFolder)
 
