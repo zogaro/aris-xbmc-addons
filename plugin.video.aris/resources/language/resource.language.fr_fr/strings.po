@@ -1,6 +1,6 @@
-# Addon Name: vStream
-# Addon id: plugin.video.vStream
-# Addon Provider: vStream
+# Addon Name: Aris
+# Addon id: plugin.video.aris
+# Addon Provider: zogaro
 msgid ""
 msgstr ""
 
@@ -57,8 +57,8 @@ msgid "Downloads already started"
 msgstr "Téléchargements déjà démarrés"
 
 msgctxt "#30013"
-msgid "vStream update"
-msgstr "Mise à jour vStream"
+msgid "aris update"
+msgstr "Mise à jour aris"
 
 msgctxt "#30014"
 msgid "Update complete"
